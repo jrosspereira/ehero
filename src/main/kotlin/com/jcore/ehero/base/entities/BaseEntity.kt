@@ -2,9 +2,10 @@ package com.jcore.ehero.base.entities
 
 import java.util.*
 
-abstract class BaseEntity(id: Long,
-                          createDate: Date,
-                          updateDate: Date,
-                          createdBy: Long) {
-
+interface BaseEntity {
+    val id: String
+    val createDate: Date
+    var updateDate: Date
+    val createdBy: Long
+    var isActive: Boolean
 }
